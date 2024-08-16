@@ -1,0 +1,44 @@
+@media (min-width: 1000px) {
+  .container {
+    text-align: center;
+    margin: 0 10%;
+    height: 100vh;
+    font-size: 1.5em;
+    position: relative;
+    justify-content: center;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.container a:hover {
+  color: #aad372;
+  cursor: pointer;
+}
+
+.container a:active {
+  color: #9b72d3;
+}
+
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+.container menu {
+  padding-inline-start: 0;
+}

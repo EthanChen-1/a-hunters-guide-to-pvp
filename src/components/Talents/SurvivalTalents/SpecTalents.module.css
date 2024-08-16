@@ -1,0 +1,184 @@
+.gridcontainer {
+  display: grid;
+  grid-template-columns: repeat(7, 70px);
+  grid-template-rows: repeat(10, 60px);
+  grid-template-areas:
+    ". . . icon1 . . ."
+    ". . icon2 . icon3 . ."
+    ". . icon4 . icon5 . ."
+    ". icon6 icon7 . icon8 icon9 ."
+    "icon10 icon11 icon12 icon13 icon14 icon15 icon16"
+    "icon17 icon18 icon19 . icon20 icon21 icon22"
+    "icon23 icon24 icon25 . icon26 icon27 icon28"
+    ". icon29 .  icon30 .  icon31 ."
+    ". icon32 . icon33 . icon34 ."
+    ". icon35 icon36 . icon37 icon38 .";
+}
+
+.icon1 {
+  grid-area: icon1;
+}
+
+.icon2 {
+  grid-area: icon2;
+}
+
+.icon3 {
+  grid-area: icon3;
+}
+
+.icon4 {
+  grid-area: icon4;
+}
+
+.icon5 {
+  grid-area: icon5;
+}
+
+.icon6 {
+  grid-area: icon6;
+}
+
+.icon7 {
+  grid-area: icon7;
+}
+
+.icon8 {
+  grid-area: icon8;
+}
+
+.icon9 {
+  grid-area: icon9;
+}
+
+.icon10 {
+  grid-area: icon10;
+}
+
+.icon11 {
+  grid-area: icon11;
+}
+
+.icon12 {
+  grid-area: icon12;
+}
+
+.icon13 {
+  grid-area: icon13;
+}
+
+.icon14 {
+  grid-area: icon14;
+}
+
+.icon15 {
+  grid-area: icon15;
+}
+
+.icon16 {
+  grid-area: icon16;
+}
+
+.icon17 {
+  grid-area: icon17;
+}
+
+.icon18 {
+  grid-area: icon18;
+}
+
+.icon19 {
+  grid-area: icon19;
+}
+
+.icon20 {
+  grid-area: icon20;
+}
+
+.icon21 {
+  grid-area: icon21;
+}
+
+.icon22 {
+  grid-area: icon22;
+}
+
+.icon23 {
+  grid-area: icon23;
+}
+
+.icon24 {
+  grid-area: icon24;
+}
+
+.icon25 {
+  grid-area: icon25;
+}
+
+.icon26 {
+  grid-area: icon26;
+}
+
+.icon27 {
+  grid-area: icon27;
+}
+
+.icon28 {
+  grid-area: icon28;
+}
+
+.icon29 {
+  grid-area: icon29;
+}
+
+.icon30 {
+  grid-area: icon30;
+}
+
+.icon31 {
+  grid-area: icon31;
+}
+
+.icon32 {
+  grid-area: icon32;
+}
+
+.icon33 {
+  grid-area: icon33;
+}
+
+.icon34 {
+  grid-area: icon34;
+}
+
+.icon35 {
+  grid-area: icon35;
+}
+
+.icon36 {
+  grid-area: icon36;
+}
+
+.icon37 {
+  grid-area: icon37;
+}
+
+.icon38 {
+  grid-area: icon38;
+}
+
+.icon39 {
+  grid-area: icon39;
+}
+
+.icon40 {
+  grid-area: icon40;
+}
+
+.icon41 {
+  grid-area: icon41;
+}
+
+.icon42 {
+  grid-area: icon42;
+}
