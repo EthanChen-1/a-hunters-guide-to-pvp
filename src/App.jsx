@@ -1,6 +1,6 @@
 import "./App.css";
+import GuideNavMenu from "./components/Header/GuideNavMenu.jsx";
 import Header from "./components/Header/Header";
-import NavBar from "./components/Header/NavBar.jsx";
 import Pets from "./components/Pets/Pets";
 import PlayStyle from "./components/PlayStyle/PlayStyle";
 import Race from "./components/Race/Race";
@@ -13,7 +13,7 @@ import StatsAndGear from "./components/StatsAndGear/StatsAndGear.jsx";
 function App() {
   return (
     <div className="container">
-      <NavBar />
+      <GuideNavMenu />
       <Header />
       <main>
         <section id="race" name="race">
