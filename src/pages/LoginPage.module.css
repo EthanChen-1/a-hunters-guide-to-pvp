@@ -1,0 +1,36 @@
+@media (min-width: 1000px) {
+  .container {
+    margin: 0 10%;
+    height: 100vh;
+    font-size: 1.25em;
+    position: relative;
+    justify-content: center;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container form {
+  display: inherit;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 16px;
+  padding: 20px;
+  height: calc(100vh - 50%);
+  width: 50%;
+  align-self: center;
+  align-items: center;
+  gap: 0.75em 0;
+}
+
+.container form input {
+  padding: 8px 16px;
+  width: 60%;
+}
+
+.container form button {
+  padding: 8px 16px;
+}
