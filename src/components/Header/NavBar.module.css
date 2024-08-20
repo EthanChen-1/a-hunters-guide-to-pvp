@@ -1,0 +1,12 @@
+.navbar {
+  position: fixed;
+  z-index: 5;
+  top: 10px;
+  right: 10px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}

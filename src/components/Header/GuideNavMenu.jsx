@@ -4,7 +4,7 @@ import styles from "./GuideNavMenu.module.css";
 export default function GuideNavMenu() {
   const [showNavBar, setShowNavBar] = useState(false);
   return (
-    <nav
+    <menu
       onMouseEnter={() => setShowNavBar(true)}
       onMouseLeave={() => setShowNavBar(false)}
       className={styles.navbar}
@@ -53,6 +53,6 @@ export default function GuideNavMenu() {
           <rect y="60" width="100" height="15" rx="8" fill="#aad372"></rect>
         </svg>
       )}
-    </nav>
+    </menu>
   );
 }

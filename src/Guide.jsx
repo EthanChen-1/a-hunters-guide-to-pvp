@@ -1,4 +1,4 @@
-import "./App.css";
+import "./Guide.css";
 import GuideNavMenu from "./components/Header/GuideNavMenu.jsx";
 import Header from "./components/Header/Header.jsx";
 import Pets from "./components/Pets/Pets.jsx";
@@ -9,10 +9,12 @@ import Talents from "./components/Talents/Talents.jsx";
 import Rotation from "./components/Rotation/Rotation.jsx";
 import Comps from "./components/Comps/Comps.jsx";
 import StatsAndGear from "./components/StatsAndGear/StatsAndGear.jsx";
+import NavBar from "./components/Header/NavBar.jsx";
 
 export default function GuideApp() {
   return (
     <div className="container">
+      <NavBar />
       <GuideNavMenu />
       <Header />
       <main>
