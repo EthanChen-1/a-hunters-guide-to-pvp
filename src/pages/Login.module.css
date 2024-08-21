@@ -11,7 +11,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 .container form {
@@ -44,4 +44,17 @@
 
 .container form span {
   color: red;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 20px;
+  font-size: 0.5em;
 }

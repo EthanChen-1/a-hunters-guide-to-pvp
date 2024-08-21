@@ -1,25 +1,27 @@
 import React from "react";
-import styles from "./LoginPage.module.css";
-import { Form, redirect, useActionData, Link } from "react-router-dom";
+import styles from "./Login.module.css";
+import { Form, redirect, useActionData, Link, json } from "react-router-dom";
+import api from "../api/api";
 
 export default function LoginPage() {
   const errors = useActionData();
-
   return (
     <div className={styles.container}>
-      <Form method="POST">
-        <h1>Register</h1>
-        <label>Username:</label>
-        <input type="text" name="username" id="username" />
-        {errors?.username && <span>{errors.username}</span>}
+      <Form method="post">
+        <h1>Login</h1>
         <label>Email:</label>
         <input type="text" name="email" id="email" />
         {errors?.email && <span>{errors.email}</span>}
         <label>Password:</label>
         <input type="password" name="password" id="password" />
         {errors?.password && <span>{errors.password}</span>}
-        <button type="submit">Submit</button>
-        <Link to={"/"}>Home Page</Link>
+        <div className={styles.buttonContainer}>
+          <button type="submit">Login</button>
+        </div>
+        <div className={styles.linkContainer}>
+          <Link to={"/signup"}>Sign Up</Link>
+          <Link to={"/"}>Home Page</Link>
+        </div>
       </Form>
     </div>
   );
@@ -27,14 +29,10 @@ export default function LoginPage() {
 
 export async function loginAction({ request }) {
   let userSubmittedForm = await request.formData();
-  const username = userSubmittedForm.get("username");
+
   const email = userSubmittedForm.get("email");
   const password = userSubmittedForm.get("password");
   const errors = {};
-
-  if (!username || username.length === 0) {
-    errors.username = "Username was not provided";
-  }
 
   if (
     !email ||
@@ -52,5 +50,16 @@ export async function loginAction({ request }) {
 
   if (Object.keys(errors).length > 0) {
     return errors;
-  } else return redirect("/");
+  }
+
+  api
+    .post(`/login`, { email, password })
+    .then((res) => {
+      localStorage.setItem("userToken", res.data.token);
+    })
+    .catch((err) => {
+      throw json(err, { status: err.status });
+    });
+
+  return redirect("/");
 }
