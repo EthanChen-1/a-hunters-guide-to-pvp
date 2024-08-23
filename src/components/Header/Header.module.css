@@ -35,20 +35,6 @@
   background-color: white;
 }
 
-.animation {
-  animation: moveToTop 0.5s 1;
-}
-
-@keyframes moveToTop {
-  0% {
-    top: 500px;
-  }
-
-  100% {
-    top: 0;
-  }
-}
-
 .header a:hover {
   color: #aad372;
   cursor: pointer;

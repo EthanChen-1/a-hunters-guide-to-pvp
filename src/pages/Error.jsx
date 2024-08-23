@@ -9,7 +9,7 @@ export default function Error() {
     <div className={styles.container}>
       <h1>Error Occurred</h1>
       <p>{error.code + ": " + error.message}</p>
-      <p>{error.response.statusText}</p>
+      <p>{error.response?.statusText}</p>
       <Link to="/">
         <p>Back to Homepage</p>
       </Link>
