@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
 
 export default function NavBar() {
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState(localStorage.getItem("userToken"));
   useEffect(() => {
     setUser(localStorage.getItem("userToken"));
   }, []);

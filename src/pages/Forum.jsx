@@ -23,10 +23,20 @@ export default function Forum() {
 
 export async function forumLoader() {
   const token = await getUserToken();
-  const res = await api.get("/forum", {
-    headers: { Authorization: `Bearer ${token}` },
-  });
-  return res.data;
+  try {
+    const res = await api.get("/forum", {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    return res.data;
+  } catch (err) {
+    if (
+      err.response.status === 401 &&
+      err.response.data.message === "Please Login Again"
+    ) {
+      localStorage.removeItem("userToken");
+      throw err;
+    }
+  }
 }
 
 async function getUserToken() {

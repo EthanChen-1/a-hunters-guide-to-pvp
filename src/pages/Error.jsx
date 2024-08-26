@@ -4,7 +4,6 @@ import styles from "./Error.module.css";
 
 export default function Error() {
   let error = useRouteError();
-  console.log(error);
   return (
     <div className={styles.container}>
       <h1>Error Occurred</h1>

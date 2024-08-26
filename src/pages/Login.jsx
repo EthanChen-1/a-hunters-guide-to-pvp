@@ -52,14 +52,10 @@ export async function loginAction({ request }) {
     return errors;
   }
 
-  api
-    .post(`/login`, { email, password })
-    .then((res) => {
-      localStorage.setItem("userToken", res.data.token);
-    })
-    .catch((err) => {
-      throw json(err, { status: err.status });
-    });
+  const res = await api.post(`/login`, { email, password });
 
+  if (res.status === 200) {
+    localStorage.setItem("userToken", res.data.token);
+  }
   return redirect("/");
 }
